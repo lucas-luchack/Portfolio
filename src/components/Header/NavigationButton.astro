@@ -1,0 +1,17 @@
+---
+interface Props {
+    name: string;
+    url: string;
+    active: boolean;
+}
+
+const {
+    name,
+    url,
+    active,
+} = Astro.props;
+---
+
+<a href={url} class=`min-w-28 py-2 text-center border-2 ${ active ? "rounded-3xl border-stroke bg-background-1 text-text-primary" : "border-transparent text-text-secondary" }`>
+    {name}
+</a>
