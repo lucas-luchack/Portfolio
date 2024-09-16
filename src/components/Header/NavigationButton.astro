@@ -2,16 +2,18 @@
 interface Props {
     name: string;
     url: string;
-    active: boolean;
 }
 
 const {
     name,
     url,
-    active,
 } = Astro.props;
+
+const active = Astro.url.pathname.slice('/')[1] == url.slice('/')[1]
+
 ---
 
-<a href={url} class=`min-w-28 py-2 text-center border-2 ${ active ? "rounded-3xl border-stroke bg-background-1 text-text-primary" : "border-transparent text-text-secondary" }`>
+<a href={url} class=`transition-all min-w-28 py-2 text-center border-2 ${ active ? "rounded-3xl border-stroke bg-background-1 text-text-primary" : "border-transparent text-text-secondary" }`>
     {name}
 </a>
+

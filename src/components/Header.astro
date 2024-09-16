@@ -6,13 +6,15 @@ import Logo from "./Logo.astro";---
 <header class="w-full flex justify-between bg-transparent py-4">
     <Logo color="#B3B3B3" width={140} />
 
-    <nav class="sticky items-start inline-flex backdrop-blur-md border-stroke border-2 text-text-primary rounded-full p-2">
-        <NavigationButton name="Accueil" url="#" active={true} />
-        <NavigationButton name="A propos" url="#" active={false} />
-        <NavigationButton name="Projet" url="#" active={false} />
-        <NavigationButton name="Blog" url="#" active={false} />
-        <NavigationButton name="Contact" url="#" active={false} />
+    <nav class="sticky items-start inline-flex backdrop-blur-md border-stroke border-2 text-text-primary rounded-full p-2 transition-all">
+        <NavigationButton name="Accueil" url="/" />
+        <NavigationButton name="A propos" url="/about" />
+        <NavigationButton name="Projet" url="/project" />
+        <NavigationButton name="Blog" url="/blog" />
+        <NavigationButton name="Contact" url="/contact" />
     </nav>
 
-    <div></div>
+    <div>
+
+    </div>
 </header>
