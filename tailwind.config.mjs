@@ -28,7 +28,14 @@ export default {
 			colors: {
 			},
 		},
-		extend: {},
+		backgroundImage: {
+			'main-pattern': "url('/assets/images/neon-background-compressed.jpg')",
+		},
+		extend: {
+			borderRadius: {
+				'card': '64px'
+			},
+		},
 	},
 	plugins: [],
 }
