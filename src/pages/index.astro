@@ -1,10 +1,31 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Hero from "../components/Home/Hero.astro";
+import Card from "../components/Home/Card.astro"
 ---
 
 <Layout
 	title="Accueil"
 	description="Étudiant développeur fullstack français"
 >
+
+	<Hero />
+
+	<main class="text-text-primary py-14 grid grid-cols-12 gap-4">
+		<Card class="col-span-6 row-span-6" useBackgroundImage>
+			<h1 class="text-4xl">Salut 👋</h1>
+		</Card>
+		<Card class="col-span-6 row-span-2">
+			<h2 class="text-2xl">Mes réalisation</h2>
+			<p class="text-sm text-text-secondary">21 projets réalisés 🎉</p>
+
+			<div class="">
+
+			</div>
+		</Card>
+		<Card class="col-span-6 row-span-6 col-start-7">
+
+		</Card>
+	</main>
 
 </Layout>
