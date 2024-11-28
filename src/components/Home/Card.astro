@@ -1,0 +1,7 @@
+---
+const { class: className, useBackgroundImage } = Astro.props
+---
+
+<div class:list={['rounded-card py-8 px-12', useBackgroundImage ? 'bg-main-pattern bg-cover bg-no-repeat bg-center' : 'bg-background-1', className]}>
+    <slot/>
+</div>

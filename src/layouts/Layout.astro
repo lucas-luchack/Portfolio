@@ -14,7 +14,7 @@ interface Props {
 const {
 	title: _title,
 	description,
-	image = `${Astro.url.origin}/og.url`,
+	image = `${Astro.url.origin}/assets/images/og.png`,
 	article
 } = Astro.props;
 
@@ -63,7 +63,7 @@ const canonical = Astro.url.href;
 		<ViewTransitions />
 	</head>
 
-	<body class="bg-background-0 text-text-primary">
+	<body class="bg-background-0 px-36">
 		<Header />
 
 		<main class="container mx-auto px-4 ">
