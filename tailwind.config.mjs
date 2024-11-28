@@ -1,3 +1,5 @@
+import plugin from "tailwindcss";
+
 /** @type {import('tailwindcss').Config} */
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
@@ -30,5 +32,15 @@ export default {
 		},
 		extend: {},
 	},
-	plugins: [],
+	plugins: [
+		require('@tailwindcss/typography'),
+		require('@tailwindcss/aspect-ratio'),
+		plugin(function ({ addComponents, theme }) {
+			addComponents({
+				'.text-important': {
+					backgroundColor: theme('colors.danger'),
+				}
+			})
+		}),
+	],
 }

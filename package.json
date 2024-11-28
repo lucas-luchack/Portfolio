@@ -10,9 +10,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.3",
-    "@astrojs/tailwind": "^5.1.0",
-    "astro": "^4.15.1",
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/tailwind": "^5.1.2",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/typography": "^0.5.15",
+    "astro": "^4.16.16",
     "astro-seo": "^0.8.4",
     "tailwindcss": "^3.4.10",
     "typescript": "^5.5.4"
