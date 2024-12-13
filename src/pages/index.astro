@@ -2,6 +2,10 @@
 import Layout from '../layouts/Layout.astro';
 import Hero from "../components/Home/Hero.astro";
 import Card from "../components/Home/Card.astro"
+import TechIcon from "../components/TechIcon.astro";
+
+const techList = ['adonisjs', 'angular', 'apache', 'astro', 'archlinux', 'azure', 'bash', 'bitbucket', 'bootstrap', 'c', 'capacitor', 'cakephp', 'cloudflare', 'cplusplus', 'css3', 'dart', 'debian', 'figma', 'flutter', 'git', 'github', 'jetbrains', 'grafana', 'html5', 'javascript', 'java', 'jira', 'jupyter', 'laravel', 'mariadb', 'markdown', 'materialui', 'mysql', 'nextjs', 'php', 'pnpm', 'qt', 'python', 'react', 'sentry', 'tailwindcss', 'typescript', 'vercel'];
+
 ---
 
 <Layout
@@ -11,20 +15,39 @@ import Card from "../components/Home/Card.astro"
 
 	<Hero />
 
-	<main class="text-text-primary py-14 grid grid-cols-12 gap-4">
-		<Card class="col-span-6 row-span-6" useBackgroundImage>
-			<h1 class="text-4xl">Salut 👋</h1>
+	<main class="text-text-primary py-14 flex flex-col md:grid grid-cols-12 gap-4">
+		<Card class="col-span-6 row-span-6 relative overflow-hidden" useBackgroundImage>
+			<img class="absolute size-36 rounded-bl-card top-[-5px] right-[-5px] hidden md:block" src="/assets/images/lucas_cv.png"  alt="Une photo de moi"/>
+			<div class="mb-12">
+				<h1 class="text-4xl">Salut 👋</h1>
+				<p class="text-xl text-text-secondary">Je suis <span class="text-danger font-bold">Lucas</span>, étudiant développeur fullstack français.</p>
+			</div>
+
+			<div>
+				<p class="text-text-primary">
+					Passionné par la technologie, je suis en train de développer mes compétences en programmation pour devenir un développeur professionnel. <br/> Je suis touche à tout : <span class="text-danger font-bold">serveurs</span>, <span class="text-danger font-bold">robots</span>, <span class="text-danger font-bold">API</span>, <span class="text-danger font-bold">infrastructure</span>, <span class="text-danger font-bold">applications mobiles</span>, etc. mais je travaille principalement sur du <span class="text-danger font-bold">développement web</span>. <br /> À côté de ça je suis aussi musicien à mes heures perdues à l'<a href="https://orchestremontois.fr" class="text-danger font-bold border-b-2 hover:border-b-4 transition-all">Orchestre Montois</a> et au Brass Landes et je fais aussi de la course d'orientation et de l'escalade. <br/>
+					<br/>
+					Concernant l'Orchestre Montois, je suis l'actuel co-président de l'association et membre du bureau. J'ai en charge la gestion administrative, la communication en ligne et les relations extérieures.
+				</p>
+			</div>
 		</Card>
 		<Card class="col-span-6 row-span-2">
 			<h2 class="text-2xl">Mes réalisations</h2>
-			<p class="text-sm text-text-secondary">21 projets réalisés 🎉</p>
+			<!-- TODO: Utiliser le nombre de projets en BD ici -->
+			<p class="text-sm text-text-secondary">8 projets réalisés 🎉</p>
 
 			<div class="">
 
 			</div>
 		</Card>
-		<Card class="col-span-6 row-span-6 col-start-7">
+		<Card class="col-span-6 row-span-5 col-start-7">
+			<h2 class="text-2xl mb-4">Mon parcours</h2>
 
+			<div>
+				<p class="text-text-primary">
+
+				</p>
+			</div>
 		</Card>
 		<Card class="col-span-6">
 			<h1 class="text-2xl">Mes technologies</h1>
@@ -38,51 +61,12 @@ import Card from "../components/Home/Card.astro"
 				Mais vous pouvez en avoir un aperçu ci-dessous.
 			</p>
 
-			<div class="mt-4 gab-2" style="font-size: 35px">
-				<i class="devicon-adonisjs-original colored" />
-				<i class="devicon-angular-plain colored" />
-				<i class="devicon-apache-plain colored" />
-				<i class="devicon-astro-plain colored" />
-				<i class="devicon-archlinux-plain colored" />
-				<i class="devicon-azure-plain colored" />
-				<i class="devicon-bash-plain" />
-				<i class="devicon-bitbucket-original colored" />
-				<i class="devicon-bootstrap-plain colored" />
-				<i class="devicon-c-plain colored" />
-				<i class="devicon-capacitor-plain colored" />
-				<i class="devicon-cakephp-plain colored" />
-				<i class="devicon-cloudflare-plain colored" />
-				<i class="devicon-confluence-plain colored" />
-				<i class="devicon-cplusplus-plain colored" />
-				<i class="devicon-css3-plain colored" />
-				<i class="devicon-dart-plain colored" />
-				<i class="devicon-debian-plain colored" />
-				<i class="devicon-figma-plain" />
-				<i class="devicon-flutter-plain colored" />
-				<i class="devicon-git-plain colored" />
-				<i class="devicon-github-original" />
-				<i class="devicon-jetbrains-plain colored" />
-				<i class="devicon-grafana-plain colored" />
-				<i class="devicon-html5-plain colored" />
-				<i class="devicon-javascript-plain colored" />
-				<i class="devicon-java-plain colored" />
-				<i class="devicon-jira-plain colored" />
-				<i class="devicon-jupyter-plain-wordmark colored" />
-				<i class="devicon-laravel-original colored" />
-				<i class="devicon-mariadb-original-wordmark colored" />
-				<i class="devicon-markdown-original" />
-				<i class="devicon-materialui-plain colored" />
-				<i class="devicon-mysql-original colored" />
-				<i class="devicon-nextjs-plain" />
-				<i class="devicon-php-plain colored" />
-				<i class="devicon-pnpm-plain colored" />
-				<i class="devicon-qt-original colored" />
-				<i class="devicon-python-plain colored" />
-				<i class="devicon-react-original colored" />
-				<i class="devicon-sentry-original colored" />
-				<i class="devicon-tailwindcss-original colored" />
-				<i class="devicon-typescript-plain colored" />
-				<i class="devicon-vercel-original" />
+			<div class="mt-4 gap-4" style="font-size: 35px">
+				{ techList.sort().map(tech => (
+					<>
+						<TechIcon tech={tech} color="plain" />
+					</>
+				)) }
 			</div>
 		</Card>
 	</main>
