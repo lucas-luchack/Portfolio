@@ -1,0 +1,11 @@
+---
+interface Props {
+    tech: string;
+    color: string;
+    colored?: boolean;
+}
+
+const { tech, color, colored = false } = Astro.props;
+---
+
+<i title={tech} class:list={[`mr-2 devicon-${tech}-${color}`, colored ? 'colored':null]} />
