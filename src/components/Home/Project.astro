@@ -1,7 +1,18 @@
 ---
-const { class: className } = Astro.props
+interface Props {
+    title: string;
+    description: string;
+    url?: string;
+    tech?: string[];
+    class?: string;
+}
+
+const { class: className, title, description, url = '#', tech } = Astro.props
 ---
 
-<div class:list={["", className]}>
-
-</div>
+<a href={ url } target="_blank">
+    <div class:list={["", className]}>
+        <h3 class="text-md">{ title }</h3>
+        <p class="text-sm text-text-secondary">{ description }</p>
+    </div>
+</a>

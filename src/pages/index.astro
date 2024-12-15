@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Hero from "../components/Home/Hero.astro";
 import Card from "../components/Home/Card.astro"
 import TechIcon from "../components/TechIcon.astro";
+import Project from "../components/Home/Project.astro";
 
 const techList = ['adonisjs', 'angular', 'apache', 'astro', 'archlinux', 'azure', 'bash', 'bitbucket', 'bootstrap', 'c', 'capacitor', 'cakephp', 'cloudflare', 'cplusplus', 'css3', 'dart', 'debian', 'figma', 'flutter', 'git', 'github', 'jetbrains', 'grafana', 'html5', 'javascript', 'java', 'jira', 'jupyter', 'laravel', 'mariadb', 'markdown', 'materialui', 'mysql', 'nextjs', 'php', 'pnpm', 'qt', 'python', 'react', 'sentry', 'tailwindcss', 'typescript', 'vercel'];
 
@@ -31,22 +32,39 @@ const techList = ['adonisjs', 'angular', 'apache', 'astro', 'archlinux', 'azure'
 				</p>
 			</div>
 		</Card>
-		<Card class="col-span-6 row-span-2">
-			<h2 class="text-2xl">Mes réalisations</h2>
-			<!-- TODO: Utiliser le nombre de projets en BD ici -->
-			<p class="text-sm text-text-secondary">8 projets réalisés 🎉</p>
+		<Card class="col-span-6 row-span-1">
+			<h2 class="text-2xl">Mon parcours</h2>
+			<p class="text-md text-text-secondary">Où suis-je actuellement ?</p>
 
-			<div class="">
-
+			<div class="mt-6 flex items-center gap-4">
+				<img src="/assets/images/iut_logo.png" alt="Logo de l'IUT de Bayonne et du Pays Basque" class="w-14" />
+				<div>
+					<p class="text-xl">IUT de Bayonne et du Pays Basque</p>
+					<p class="text-text-secondary text-md">BUT Informatique <span class="italic">(2e année)</span></p>
+					<p class="text-text-secondary text-sm">Parcours développement d'applications - <span class="italic">RACDV (A)</span></p>
+				</div>
 			</div>
 		</Card>
-		<Card class="col-span-6 row-span-5 col-start-7">
-			<h2 class="text-2xl mb-4">Mon parcours</h2>
+		<Card class="col-span-6 row-span-6 col-start-7">
+			<h2 class="text-2xl">Mes projets</h2>
+			<p class="text-sm text-text-secondary">J'ai mis en pratique mes compétences dans les expériences ci-dessous</p>
 
-			<div>
-				<p class="text-text-primary">
-
-				</p>
+			<div class="mt-6 gap-4 flex flex-col">
+				<Project
+					title="Espace Musiciens - Orchestre Montois"
+					description="J'ai réalisé l'entièreté d'un espace membre pour l'Orchestre Montois. Les musiciens peuvent y retrouver les partitions, les informations sur les concerts, les répétitions, les contacts, etc. et peuvent s'y inscrire ce qui permet de gérer les effectifs pour les concerts. Nous pouvons aussi suivre les informations sur les membres notamment les cotisations, les absences, ainsi que les références des instruments pour l'assurance."
+					url="https://espace-musiciens.orchestremontois.fr" />
+				<Project
+					title="API - Orchestre Montois"
+					description="En parallèle de l'espace musiciens, j'ai réalisé une API pour l'Orchestre Montois. Elle permet de gérer la partie back-end de l'espace musiciens."
+					url="https://api.orchestremontois.fr" />
+				<Project
+					title="Papillon - Votre vie scolaire"
+					description="Durant mes années de lycée, j'ai réalisé avec l'aide de mes collaborateurs l'application Papillon. Elle permet aux élèves de consulter leur emploi du temps, les devoirs, les notes, les absences, les sanctions, les informations de l'établissement, etc. Elle est aujourd'hui téléchargée par plus de 500 000 utilisateurs. Je ne suis plus actif sur le projet mais je reste en contact avec les développeurs actuels."
+					url="https://papillon.bzh" />
+				<Project
+					title="Gadia - Prochain niveau de Vie Scolaire"
+					description="J'ai commencé à travailler sur un projet de remplacement de Vie Scolaire. Il est actuellement en phase de développement. Il consiste à proposer une alternative open-source à Pronote." />
 			</div>
 		</Card>
 		<Card class="col-span-6">
