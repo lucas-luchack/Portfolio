@@ -1,0 +1,24 @@
+---
+
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Home/Hero.astro";
+import Card from "../components/Home/Card.astro";---
+
+<Layout
+        title="Contact"
+        description="Étudiant développeur fullstack français"
+>
+
+    <main class="text-text-primary py-14 flex flex-col md:grid grid-cols-2 grid-rows-4 gap-4">
+        <Card class="row-span-4">
+            <h1 class="text-4xl">Contact</h1>
+            <p class="text-xl text-text-secondary">Vous pouvez me contacter via les réseaux sociaux ou par mail.</p>
+        </Card>
+
+        <Card class="row-span-1">
+            <h3 class="text-xl">Par mail</h3>
+            <p class="text-text-secondary">hello@luchack.dev</p>
+        </Card>
+    </main>
+
+</Layout>

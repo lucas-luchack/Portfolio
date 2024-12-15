@@ -1,7 +1,13 @@
 ---
-const { class: className, useBackgroundImage } = Astro.props
+const { class: className, useBackgroundImage, link: linkUrl } = Astro.props
+
+function redirect(url: string) {
+    if (url) {
+        window.location.href = url;
+    }
+}
 ---
 
-<div class:list={['rounded-card py-8 px-12', useBackgroundImage ? 'bg-main-pattern bg-cover bg-no-repeat bg-center' : 'bg-background-1', className]}>
+<div class:list={['rounded-card py-8 px-12', useBackgroundImage ? 'bg-main-pattern-darken bg-cover bg-no-repeat bg-center' : 'bg-background-1', className]}>
     <slot/>
 </div>
