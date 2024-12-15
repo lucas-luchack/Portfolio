@@ -9,7 +9,7 @@ const {
     url,
 } = Astro.props;
 
-const active = Astro.url.pathname.slice('/')[1] == url.slice('/')[1]
+const active = Astro.url.pathname.split('/')[1] == url.split('/')[1]
 
 ---
 
