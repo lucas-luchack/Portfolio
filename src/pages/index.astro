@@ -16,7 +16,7 @@ const techList = ['adonisjs', 'angular', 'apache', 'astro', 'archlinux', 'azure'
 
 	<Hero />
 
-	<main class="text-text-primary py-14 flex flex-col md:grid grid-cols-12 gap-4">
+	<main class="text-text-primary py-14 flex flex-col md:grid grid-cols-12 gap-8">
 		<Card class="col-span-6 row-span-6 relative overflow-hidden" useBackgroundImage>
 			<img class="absolute size-36 rounded-bl-card top-[-5px] right-[-5px] hidden md:block" src="/assets/images/lucas_cv.png"  alt="Une photo de moi"/>
 			<div class="mb-12">
@@ -67,10 +67,10 @@ const techList = ['adonisjs', 'angular', 'apache', 'astro', 'archlinux', 'azure'
 					description="J'ai commencé à travailler sur un projet de remplacement de Vie Scolaire. Il est actuellement en phase de développement. Il consiste à proposer une alternative open-source à Pronote." />
 			</div>
 		</Card>
-		<Card class="col-span-6">
+		<Card class="col-span-6 flex flex-col">
 			<h1 class="text-2xl">Mes technologies</h1>
 			<p class="text-md text-text-secondary">
-				J'utilise de nombreuses technologies différentes pour mes projets.
+				J'utilise de nombreuses technologies différentes pour mes projets. Ici, on parle plus de hard skills que de soft skills.
 			</p>
 			<p class="text-md text-text-secondary">
 				Vous pourrez consulter sur chaque projet les technologies utilisées.
@@ -79,7 +79,7 @@ const techList = ['adonisjs', 'angular', 'apache', 'astro', 'archlinux', 'azure'
 				Mais vous pouvez en avoir un aperçu ci-dessous.
 			</p>
 
-			<div class="mt-4 gap-4 bg-main-pattern-lighten bg-clip-text text-transparent bg-cover" style="font-size: 35px">
+			<div class="mt-4 gap-4 bg-main-pattern-lighten bg-clip-text text-transparent bg-cover text-center justify-center" style="font-size: 35px">
 				{ techList.sort().map(tech => (
 					<>
 						<TechIcon tech={tech} color="plain" />
